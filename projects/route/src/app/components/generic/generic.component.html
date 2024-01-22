@@ -1,0 +1,40 @@
+<!-- <p>generic works!</p>
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-generic-user-form',
+  template: `
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+      <div *ngFor="let field of fields">
+        <label>{{ field.label }}</label>
+        <input *ngIf="field.type !== 'textarea'" [type]="field.type" [formControlName]="field.property" />
+        <textarea *ngIf="field.type === 'textarea'" [formControlName]="field.property"></textarea>
+      </div>
+      <button type="submit">{{ buttonText }}</button>
+    </form>
+  `,
+})
+export class GenericUserFormComponent<T> implements OnInit {
+  @Input() fields: { label: string; property: keyof T; type: 'text' | 'email' | 'textarea' }[] = [];
+  @Input() buttonText: string = 'Submit';
+  @Output() formSubmit = new EventEmitter<T>();
+
+  userForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    const formGroup = {};
+    this.fields.forEach(field => {
+      formGroup[field.property] = [null, Validators.required];
+    });
+    this.userForm = this.fb.group(formGroup);
+  }
+
+  submitForm() {
+    this.formSubmit.emit(this.userForm.value);
+    this.userForm.reset();
+  }
+}
+ -->

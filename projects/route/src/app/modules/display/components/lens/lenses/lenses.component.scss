@@ -1,0 +1,32 @@
+.lens-details{
+    width: 70%;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.lens-banner-image{
+    width: 100%;
+    height: 320px;
+}
+.lens-title{
+    margin: 10px 0px;
+    width: 100%;
+    text-align: center;
+}
+.lens-info{
+    display: flex;
+    width: 100%;
+    margin: 10px 0px;
+}
+.lens-info-rating, .lens-info-duration,.lens-info-author{
+    width: 33%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.lens-desc{
+    padding: 30px 50px;
+    font-size: 14px;
+}
+
+

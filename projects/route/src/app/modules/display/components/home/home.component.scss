@@ -1,0 +1,18 @@
+* {
+    font-family: fantasy;
+    text-align: center;
+    padding-top: 8vh;
+    background: linear-gradient(to bottom right, #c8e099, #0099cc);
+}
+
+body {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30vh;
+    color: black;
+}
+
+p {
+    font-size: 8em;
+}

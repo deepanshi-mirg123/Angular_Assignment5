@@ -1,31 +1,3 @@
-// import { Injectable, inject } from "@angular/core";
-// import { UserService } from "./user.service";
-// @Injectable({
-//     providedIn: 'root'
-// })
-// export class AuthService{
-//     isLogged: Boolean = false;
-//     userService: UserService = inject(UserService);
-//   isLoggedIn: any;
-
-//     login(username: string, password: string){
-//         let user = this.userService.users.find((u: { username: string; password: string; }) => u.username === username 
-//                                                     && u.password === password);
-//         if(user === undefined)
-//             this.isLogged = false;
-//         else
-//             this.isLogged = true;
-//         return user;
-//     }
-
-//     logout(){
-//         this.isLogged = false;
-//     }
-
-//     IsAuthenticated(){
-//         return this.isLogged;
-//     }
-// }
 import { Observable, of, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';

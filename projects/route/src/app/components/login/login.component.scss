@@ -1,36 +1,51 @@
-.login-form-container{
-    background-color: #28282B;
-    border: #28282B  1px solid;
+.login-form-container {
+  background-color: #2f2fb0;
+  border: #28282B 1px solid;
 }
 
-.login-form{
-    background-color: white;
-    padding: 30px 50px;
-    width: 40%;
-    margin: 100px auto; 
+.container vh-100 {
+  background-color: #FF5733;
 }
+
+.login-form {
+  width: 40vw;
+}
+
 /* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  button {
-    background-color: #FF5733;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  .container {
-    padding: 16px;
-  }
-  .cancel-button-div{
-    text-align: right;
-    width: 100%;
-  }
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: green;
+}
+
+.row {
+  width: 40vw;
+  margin-left: 15vw;
+}
+
+button {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.container {
+  padding: 16px;
+  background-color: lightblue;
+}
+
+.cancel-button-div {
+  text-align: right;
+  width: 100%;
+}

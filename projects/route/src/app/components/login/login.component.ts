@@ -12,31 +12,20 @@ import { Observable, catchError, tap, throwError } from 'rxjs';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+
   faLock = faLock;
   loginForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
   });
-  constructor(private auth: AuthService, private router: Router) {}
-
+  constructor(private auth: AuthService, private router: Router) { }
   ngOnInit(): void {
+    console.log('login loaded');
     if (this.auth.isLoggedIn()) {
       this.router.navigate(['display']);
     }
   }
-  // onSubmit(): void {
-  //   if (this.loginForm.valid) {
-  //     this.auth.login(this.loginForm.value).subscribe(
-  //       (result) => {
-  //         console.log(result);
-  //         this.router.navigate(['/admin']);
-  //       },
-  //       (err: Error) => {
-  //         alert(err.message);
-  //       }
-  //     );
-  //   }
-  // } 
+
   onSubmit(): void {
     if (this.loginForm.valid) {
       this.auth.login(this.loginForm.value)
@@ -54,4 +43,5 @@ export class LoginComponent implements OnInit {
     }
   }
 }
-  
+
+

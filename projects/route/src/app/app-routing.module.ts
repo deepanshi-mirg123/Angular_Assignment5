@@ -12,6 +12,7 @@ const routes: Routes = [
     path: 'display',  
     loadChildren: () => import('./modules/display/display.module').then((m) => m.DisplayModule),
   },
+
   { path: '**', component: ErrorComponent }
 ];
 

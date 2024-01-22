@@ -7,9 +7,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ServicesComponent } from './components/services/services.component';
-
-
+import { LensComponent } from './components/lens/lens.component';
+import { LensService } from '../../services/lens.service';
+import { LensesComponent } from './components/lens/lenses/lenses.component';
 
 
 @NgModule({
@@ -20,13 +20,16 @@ import { ServicesComponent } from './components/services/services.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ServicesComponent,
+    LensComponent,
+    LensesComponent,
   
    
   ],
+
   imports: [
     CommonModule,
     DisplayRoutingModule
-  ]
+  ],
+  providers: [LensService],
 })
 export class DisplayModule { }

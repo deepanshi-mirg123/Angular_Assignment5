@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private auth: AuthService) {}
+  constructor(private auth: AuthService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   logout(): void {
     this.auth.logout();
   }

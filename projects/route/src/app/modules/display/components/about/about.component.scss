@@ -1,0 +1,35 @@
+body {
+    background-color: cornflowerblue;
+    background-size: auto;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    padding-top: 120px;
+    text-align: center;
+    border: 2px solid black;
+    width: 35vw;
+    height: 40vh;
+    background-color: lightgrey;
+}
+
+.left {
+    margin-left: 10vw;
+}
+
+.right {
+    margin-left: 50vw;
+}
+
+section :hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.05);
+}

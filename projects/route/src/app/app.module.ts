@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-pssword/forgot-password.component';
 import { LoginComponent } from './components/login/login.component';
+import { GenericComponent } from './components/generic/generic.component';
 
 
 
@@ -18,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
     ErrorComponent,
     LoginComponent,
     ForgotPasswordComponent,
+    GenericComponent,
     
     
    

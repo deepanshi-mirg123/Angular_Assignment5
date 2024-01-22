@@ -81,9 +81,10 @@ import { CanActivateFn } from "@angular/router";
 import { AuthService } from "../services/auth.service";
 import { Router } from "@angular/router";
 import { inject } from "@angular/core";
+import { LensService } from "../services/lens.service";
 
 export const authGaurd:  CanActivateFn = (route,state)=>{
-  // return false;
+  return true;
 
   const authservice = inject (AuthService)
   const router = inject (Router)
@@ -91,4 +92,9 @@ export const authGaurd:  CanActivateFn = (route,state)=>{
   router.navigate(['/login']);
   }
   return AuthService.isLoggedIn();
+}
+
+export const resolve =() =>{
+const lensService = inject (LensService)
+  return lensService.getAlllenses();
 }

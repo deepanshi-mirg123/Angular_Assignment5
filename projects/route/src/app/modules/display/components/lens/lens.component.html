@@ -1,0 +1,38 @@
+<div class="lens-page-main-container">
+    <div class="lens-banner">
+        <div class="lens-banner-layover">
+            <h1>Empower your eyes with high quality lenses</h1>
+        </div>
+    </div>
+    <div class="lens-page-all-lens">
+        <h2>Choose the lens best suits you</h2>
+        <hr>
+        <div class="lens-page-lens-list">
+            <div class="lens-card" *ngFor="let lens of AllLenses">
+                <div class="lens-image">
+                    <img [src] ="lens.image">
+                </div>
+                <div class="lens-title">
+                  
+                    {{ lens.title}}
+                </div>
+               
+                <div class="lens-desc">
+                    {{ lens.desc.substring(0, 120) }}
+                </div>
+                <div class="lens-price-rating">
+                    <div class="lens-price"><b>PRICE:</b> {{lens.price}}</div>
+                    <div class="lens-rating"><b>RATINGS:</b> {{ lens.rating }}</div>
+                </div>
+              
+                 <div class="lens-action-buttons">
+                 
+                    <button class="btn"  [routerLink]="'/lens/lenses/'+ lens.id">DETAILS</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <a routerLink="'/lens'"  [queryParams]="{search: 'JavaScript'}">Show Lenses</a>
+</div>
+
